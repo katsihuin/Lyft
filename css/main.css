@@ -1,0 +1,47 @@
+.app-content {
+    background: url("https://s.yimg.com/ny/api/res/1.2/He5PMFN8LWIlnKbXqV5sUA--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/digital_trends_973/bbbf55637a6414fde36fbd1cde1264c8") center center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+
+.logo {
+	width: auto;
+	max-width: 150px;
+	height: auto;
+	max-height: 100px;
+	margin: auto;
+}
+.button {
+	position: relative;
+}
+.login {
+	position: absolute;
+	bottom: 0;
+}
+
+.btn-1 {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  margin: auto;
+}
+
+.btn-1:focus, .btn-1.focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+.btn-1:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+.btn-2 {
+
+}
