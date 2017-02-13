@@ -1,5 +1,6 @@
-.app-content {
+body{
     background: url("https://s.yimg.com/ny/api/res/1.2/He5PMFN8LWIlnKbXqV5sUA--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/digital_trends_973/bbbf55637a6414fde36fbd1cde1264c8") center center;
+    background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
@@ -7,41 +8,46 @@
 
 .logo {
 	width: auto;
-	max-width: 150px;
+	max-width: 250px;
 	height: auto;
-	max-height: 100px;
-	margin: auto;
-}
-.button {
-	position: relative;
-}
-.login {
-	position: absolute;
-	bottom: 0;
+	max-height: 200px;
+	margin: 0 auto;
+  margin-top: 20px;
 }
 
-.btn-1 {
+section{
+  position: absolute;
+  bottom:0px;
+  right:0px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 10px;
+ 
+}
+.btn-1, .btn-2 {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
-  padding: 10px 20px;
   font-size: 18px;
-  line-height: 1.3333333;
+  width: 20%;
+  height: 20%;
   border-radius: 6px;
-  margin: auto;
+  margin: 0 auto;
+}
+.btn-1 {
+  background-color: transparent;
 }
 
-.btn-1:focus, .btn-1.focus {
+.btn-2 {
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.3) 10% ,rgba(184,11,140,0.4) 40%,rgba(255,0,166,0.7) 70%, rgb(255,0,166) 100%  ); 
+}
+
+.btn-1:focus, .btn-1.focus, .btn-2:focus, .btn-2.focus {
   color: #fff;
   background-color: #286090;
   border-color: #122b40;
 }
-.btn-1:hover {
+.btn-1:hover, .btn-2:hover{
   color: #fff;
-  background-color: #286090;
   border-color: #204d74;
-}
-
-.btn-2 {
-
 }

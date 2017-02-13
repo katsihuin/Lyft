@@ -18,27 +18,32 @@
 					<img src="img/logo.png" class="img-responsive logo">
 				</div>
 			</header>
-			<section>
-				<div class="fluid-container">
-					<div class="row ">
-						<div class="col-sm-6 btn-container text-right">
-							
-								<a class="btn btn-1 btn-lg" id="login" href="login.html" role="button">Log in</a>
-							
-						</div>
-						<div class="col-sm-6 btn-container ">
-							
-								<a class="btn btn-primary btn-lg btn-2" href="signup.html" role="button">Sign up</a>
-						
-						</div>	
-					</div>
-				</div>
-			</section>
+			<button type="button" name="source" id="source">Start Journey</button>
+				<div id="source_placeholder"></div><br />
+				 
+				<button type="button" name="destination" id="destination">Stop Journey</button>
+				<div id="destination_placeholder"></div><br />
+				 
+				<button type="button" name="calculate" id="calculate">Show Result</button>
+				<div id="directions-panel"></div><br />
+				 
+				<div id="map"></div>
+				
+
 		</div>
 	</div>
+	
+	
 
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=this-is-my-google-map-api-browser-key&signed_in=true&callback=initMap"
+	        async defer>
+	</script>
 	<script src="js/main.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+
 
 </body>
 </html>
