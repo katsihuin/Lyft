@@ -8,10 +8,11 @@
   <!-- Inserta tus enlaces aquí -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="http://bootstrapformhelpers.com/assets/css/bootstrap-formhelpers.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/signup.css">
 </head>
-<body class="hero">
+<body onload ="init()">
 	<div class="container">
 		<div id="app-content">
 			<header>
@@ -30,16 +31,22 @@
 				<div class="container">
 					<div class="row text-center">
 					  <div class="col-md-8 col-xs-offset-2">
-					    <div class="input-group ">
-					      <div class="input-group-btn ">
-					        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <div class="input-group">
+					      <div class="input-group-btn">
+							<!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					        	<img src="flags/flat/16/peru.png">
 					        	<span class="caret"></span>
-					        </button>
-					        <ul class="dropdown-menu">
-					        </ul>
+					        </button>-->
+							<form>
+							  <select id="countries_phone_select" class="form-control bfh-countries country col-md-2" data-country="US"></select>
+							  <input type="text" class="form-control bfh-phone country-code col-md-10" data-country="countries_phone_select">
+							</form>
+								
+					        <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					        	<img src="flags/flat/16/peru.png">
+					        	<span class="caret"></span>
+					        </button>-->
 					      </div>
-					      <input type="text" class="form-control" aria-label="" placeholder=" +51">
 					    </div>
 					    <br>
 					    <p>We'll send a text to verify your phone</p>
@@ -58,7 +65,7 @@
 			</footer>
 		</div>
 	</div>
-
+	<script src="http://bootstrapformhelpers.com/assets/js/bootstrap-formhelpers.min.js" defer=""></script>
 	<script src="js/main.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
