@@ -1,3 +1,49 @@
+header p{
+	font-size: 20px;
+}
 
+header a {
+	text-decoration: none;
+	color: black;
+}
+.title {
+	margin-left:20px;
+}
+.goback {
+	text-decoration: none; 
+	color: black;
+}
+
+.goback span{
+	margin-top: 20px;
+	font-size:40px;
+	color: black;
+}
+
+hr {
+	width: 100%;
+}
+section {
+	margin: 0 auto;
+
+}
+
+.btn-login {
+	width: 100%;
+	padding: 10px; 
+	background-color: #EA0B8C;
+	color: #fff;
+}
+section a {
+	text-decoration: none;
+	font-size: 30px;
+}
+footer {
+	position: absolute;
+	bottom:0px;
+    right:0px;
+    left: 0px;
+	margin-bottom: 10px;
+}
 
 
