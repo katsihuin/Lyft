@@ -7,36 +7,41 @@
 
   <!-- Inserta tus enlaces aquí -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap-formhelpers.css">
+	<link rel="stylesheet" href="bootstrap-formhelpers/css/bootstrap-formhelpers.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/country.css">
 </head>
-<body class="hero">
+<body onload ="initCountry()">
 		<div class="container">
 		<div id="app-content">
 			<header>
-				<div class="row ">
-			        <div class="col-md-9 text-center title">
-				        <h1>Select Country</h1>
+				<div class="row">
+					<div class="col-md-8 col-sm-8 col-xs-8 text-right">
+				        <h3>Select Country</h3>
 	       			</div>
-	       			<div class="col-md-1">
-						<a href="signup.html" class="close"><span class=""></span>Close</a>
+			        <div class="col-md-1 col-sm-1 col-xs-1 pull-right">
+						<a href="signup.html" class="close">Close</a>
 					</div>
-	        		<hr>
   				</div>
 			</header>
 			<section>
 				<div class="container">
 					<div class="row text-center">
-					  <div class="col-md-12"> Common countries
+					
+					  <div class="col-md-12  "> 
+					  <hr>
+					  	<div class="">
+					  		<h5 class="text-left">Common Countries</h5>
+					  	</div>
+					  <hr>		
 					      	<div class="bfh-selectbox bfh-countries list-country" data-country="US" data-flags="true">
 					      	</div>
-					  </div>
+					  </div>				
 					</div>
 				</div>
 			</section>
-	<script src="js/main.js"></script>
-	<script src="js/bootstrap-formhelpers.js"></script>
+	<script type="text/javascript" src="js/country.js"></script>
+	<script src="http://bootstrapformhelpers.com/assets/js/bootstrap-formhelpers.min.js" defer=""></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>

@@ -1,4 +1,4 @@
-function init() {
+/*function init() {
 	var country = document.getElementById('button');
 	button.addeventlistener ('click', onButtonClick);
 
@@ -10,4 +10,4 @@ function init() {
 
 function setCountry() {
 
-}
+}*/

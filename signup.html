@@ -11,16 +11,19 @@
 	<link href="http://bootstrapformhelpers.com/assets/css/bootstrap-formhelpers.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/signup.css">
+	<link rel="stylesheet" href="css/login.css">
+	
+
 </head>
-<body onload ="init()">
+<body onload ="initSignUp()">
 	<div class="container">
 		<div id="app-content">
 			<header>
 				<div class="row ">
-					<div class="col-md-1">
+					<div class="col-md-1 col-sm-1 col-xs-1">
 						<a href="index.html" class="goback"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
 					</div>
-			        <div class="col-md-9 text-center title">
+			        <div class="col-md-9 col-sm-9 col-xs-9 text-center title">
 				        <h1>Sign up</h1>
 				        <p>Join now for free ride credit</p>
 	       			</div>
@@ -33,19 +36,12 @@
 					  <div class="col-md-8 col-xs-offset-2">
 					    <div class="input-group">
 					      <div class="input-group-btn">
-							<!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					        	<img src="flags/flat/16/peru.png">
-					        	<span class="caret"></span>
-					        </button>-->
+			
 							<form>
 							  <select id="countries_phone_select" class="form-control bfh-countries country col-md-2" data-country="US"></select>
 							  <input type="text" class="form-control bfh-phone country-code col-md-10" data-country="countries_phone_select">
 							</form>
-								
-					        <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					        	<img src="flags/flat/16/peru.png">
-					        	<span class="caret"></span>
-					        </button>-->
+							
 					      </div>
 					    </div>
 					    <br>
@@ -66,7 +62,8 @@
 		</div>
 	</div>
 	<script src="http://bootstrapformhelpers.com/assets/js/bootstrap-formhelpers.min.js" defer=""></script>
-	<script src="js/main.js"></script>
+	<script src="js/login.js"></script>
+	<script type="text/javascript" src="js/signup.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </body>
