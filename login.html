@@ -33,30 +33,26 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
-							<div class="form-group">
+						    <form name="myForm" action="/app.html" onsubmit="return validateForm()" method="post">
+						        <div class="form-group">
 						        <div class="input-group">
-							        <div id="input-box">
 							        	<span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
 							          	<input  id="commentName" name="name" type="text" required class="form-control" placeholder="First Name" onkeyup="validateName()">
-							          	<span id="commentNamePrompt"></span>
-							       	</div>
-						 
-						      	
-						          	
 							          	<span class="input-group-addon"></span>
 							          	<input id="commentLastName" name="lastname" type="text"  class="form-control" required placeholder="Last Name" onkeyup="validateLastName()">
-							          	<span id="commentLastNamePrompt"></span>
-						          
 						        </div>
+                                <span id="commentNamePrompt"></span><br>
+						     	<span id="comentLastNamePrompt"></span>
+
 						        <br>
 						        <div class="input-group">
-						        	
 						          	<div class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
 						          	<input id="commentEmail" name="lastname" type="text" class="form-control" required placeholder="Email" onkeyup="validateEmail()">
-						          	 <span id="commentEmailPrompt"></span>
-						          	 
 						        </div>
+						        <span id="commentEmailPrompt"></span>
 						     </div>
+						    </form>
+							
 					 	</div>
 					</div>
 				</div>
@@ -66,7 +62,7 @@
 					<div class="row ">
 						<div class="col-md-10 col-xs-offset-1 text-center">
 						<div class="checkbox">
-							<input type="checkbox" name=""> I agree to Lyft's <span style="color:#40A9DD"> Terms of Service</span>
+							<input type="checkbox" name="" id="commentInfo" onkeyup="validateInfo()"> I agree to Lyft's <span style="color:#40A9DD"> Terms of Service</span>
 						</div>
 						</div>
 					</div>
@@ -76,7 +72,7 @@
 				<div class="container">
 					<div class="row">
 				        <div class="col-md-12 text-center">
-							<a href="country.html"><button onclick="validateForm()" class="btn-login">Next</button></a>
+							<a href="app.html"><button type="button" onclick="validateForm()" class="btn-login">Next</button></a>
 						</div>
 					</div>
 				</div>

@@ -19,6 +19,7 @@ function displayLocation(position) {
   //Valores de latitud y longitud obtenidos de HTML5 API
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
+    console.log(position.coords.latitude,position.coords.longitude);
 
 
   // Creando un nuevo objeto para el uso de valores de latitud y longitud con Google map
@@ -46,13 +47,61 @@ function createMarker(latLng) {
     position: latLng,
     map: map,
     animation: google.maps.Animation.DROP,
-    clickable: true
+    clickable: true,
+    title: '¡Estoy Aqui!',
+    icon: 'img/person2.png'
   }
   var marker = new google.maps.Marker(markerOptions);
+    
+    var location1 = {lat: -16.4526377 , lng: -71.531716};
+    var marker = new google.maps.Marker({
+    position: location1,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    clickable: true,
+    title: 'taxi lyft',
+    icon: 'img/coche2x.png'});
+        
+   
+    var location2 = {lat: -16.450210, lng: -71.524850};
+    var marker = new google.maps.Marker({
+    position: location2,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    clickable: true,
+    title: 'taxi lyft',
+    icon: 'img/coche3x.png'});
+    
+    var location3 = {lat: -16.460787, lng: -71.528755};
+    var marker = new google.maps.Marker({
+    position: location3,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    clickable: true,
+    title: 'taxi lyft',
+    icon: 'img/coche4x.png'});
+    
+    var location4 = {lat: -16.455830 , lng: -71.538262};
+    var marker = new google.maps.Marker({
+    position: location4,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    clickable: true,
+    title: 'taxi lyft',
+    icon: 'img/coche5x.png'});
+    
+    var location5 = {lat: -16.456036 , lng: -71.520023};
+    var marker = new google.maps.Marker({
+    position: location5,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    clickable: true,
+    title: 'taxi lyft',
+    icon: 'img/coche6x.png'});
 
   var content = 'Estas aqui: ' + latLng.lat() + ', ' + latLng.lng();
   addInfoWindow(marker, latLng, content);
-  displayTravelledRouteOnMap();
+  
 
 }
 
