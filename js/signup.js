@@ -1,15 +1,18 @@
 function initSignUp() {
 
-	let navbar = Array.from(document.getElementsByClassName('countries_phone_select>div>ul>li>a'));
-
-	for (var i=0; i<navbar.length; i++)
-		{
-			navbar.addEventListener("click", getCountry)
-		}
+    var flag = document.getElementById("flag");
+    var dialCode = document.getElementById("dialCode");
+    
+    var getFlag = localStorage.getItem('location',countryFlag);
+	var getDialCode = localStorage.getItem('intDialCode',countryDialCode);
+    
+    flag = getFlag.src;
+    dialCode = getDialCode.textContent;
+    
 }
 
-function getCountry()
+/*function getCountry()
 {
     var inputCountry = country.value;
 	localStorage.setItem('country', inputCountry);
-}
+}*/

@@ -34,17 +34,18 @@
 			<section>
 				<div class="container">
 					<div class="row text-center">
-					  <div class="col-md-8 col-xs-offset-2">
-					    <div class="input-group">
-					      <div class="input-group-btn">
-			
-							<form>
-							  <select id="countries_phone_select" class="form-control bfh-countries country col-md-2" data-country="US"></select>
-							  <input type="text" class="form-control bfh-phone country-code col-md-10" data-country="countries_phone_select">
-							</form>
-							
-					      </div>
-					    </div>
+					  <div class="col-md-8 col-xs-offset-2">				    
+                        <div class="form-group">
+                            <div class="input-group">
+                               <span class="input-group-addon">
+                                <a href="country.html" class="button">
+                                    <img src="" alt="" id="flag">
+                                </a>   
+                               </span>
+                                <span class="input-group-addon" id="dialCode"></span>
+                                <input id="phoneNumber" name="" type="text" class="input-phone" required placeholder="" onkeyup="validatePhone()">
+                            </div>
+                        </div>
 					    <br>
 					    <p>We'll send a text to verify your phone</p>
 					  </div>
@@ -55,7 +56,7 @@
 				<div class="container">
 					<div class="row">
 				        <div class="col-md-12 text-center">
-							<a href="aleatorio.html"><button class="btn-login">Next</button></a>
+							<a href="#"><button class="btn-login">Next</button></a>
 						</div>
 					</div>
 				</div>

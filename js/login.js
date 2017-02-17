@@ -20,7 +20,8 @@ function validateForm()
 	}	
 	else
 	{
-		var sendForm=document.getElementById("sendForm");
+        var valid;
+        var sendForm=document.getElementById("sendForm");
       	sendForm.href="app.html";
 		jsShow("commentPrompt");
 		producePrompt("Formulario Validado Exitósamente", "commentPrompt", "green");
