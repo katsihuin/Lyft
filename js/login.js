@@ -11,11 +11,33 @@ function validateForm()
     valid = valid && validateInfo();
 
     return valid;
+
+    if (!validateName() || !validateLastName() || !validateEmail() || !validateInfo())
+	{
+		jsShow("commentPrompt");
+		producePrompt("Formulario debe estar validado para poder registrarte", "commentPrompt", "red");
+		setTimeout(function(){jsHide("commentPrompt");}, 2000);
+	}	
+	else
+	{
+		var sendForm=document.getElementById("sendForm");
+      	sendForm.href="app.html";
+		jsShow("commentPrompt");
+		producePrompt("Formulario Validado Exitósamente", "commentPrompt", "green");
+	}
 }
 
-var submitBtn = document.getElementsByClassName('btn-login'); 
-submitBtn.addEventListener('click', validateForm);
+/* Muestra mensaje validación */
+function jsShow(id)
+{
+	document.getElementById(id).style.display="block";
+}
 
+/* Oculta mensaje validación */
+function jsHide(id)
+{
+	document.getElementById(id).style.display="none";
+}
 /* Envia Mensaje al usuario*/
 function producePrompt(message, promptLocation, color)
 {
@@ -24,40 +46,54 @@ function producePrompt(message, promptLocation, color)
     
 }
 
+function firstToUpperCase(_texto)
+{
+	var result = _texto[0].toUpperCase() + _texto.slice(1);
+	var mayus = result.split(" ");
+	return result;
+}
+
 /* Valida Nombre*/
 function validateName()
 {
-	var name =  document.getElementById("commentName").value;
+	var inputName = document.getElementById("commentName");
+	var name =  inputName.value;
+
+	inputName.value = firstToUpperCase(name);
 
 	if (name.length == 0)
 	{
 		producePrompt("Tu Nombre es requerido", "commentNamePrompt", "red");
 		return false;
 	}
-	else if (!name.match(/^[a-zA-Z\s]*$/)) 
+	else if (!name.match(/^[A-Z][a-z]*[a-zA-Z]$/)) 
 	{
-		producePrompt("Compruebe que la primera letra de su Nombre sea mayúscula y contenga SOLO caracteres de la A-Z", "commentNamePrompt", "red");
+		producePrompt("Compruebe que su Nombre contenga SOLO caracteres de la A-Z", "commentNamePrompt", "red");
 		return false;
 	}
 	else 
 	{
-		producePrompt("Bienvenido(a) " + name, "commentNamePrompt", "green");
-		return true;
+		producePrompt("Bienvenido(a) " + name, "commentNamePrompt", "green")
 	}	
+
 }
 
 /* Valida Apellido*/
 function validateLastName()
 {
-	var lastName = document.getElementById("commentLastName").value;
+	var inputLastName = document.getElementById("commentLastName");
+	var lastName =  inputLastName.value;
+
+	inputLastName.value = firstToUpperCase(lastName);
+
 	if (lastName.length == 0)
 	{
 		producePrompt("Tu Apellido es requerido", "commentLastNamePrompt", "red");
 		return false;
 	}
-	else if (!lastName.match(/^[a-zA-Z\s]*$/)) 
+	else if (!lastName.match(/^[A-Z][a-z]*[a-zA-Z]$/)) 
 	{
-		producePrompt("Compruebe que la primera letra de su Apellido sea mayúscula y contenga SOLO caracteres de la A-Z", "commentLastNamePrompt", "red");
+		producePrompt("Compruebe que su Apellido contenga SOLO caracteres de la A-Z", "commentLastNamePrompt", "red");
 		return false;
 	}
 	else 
@@ -91,10 +127,10 @@ function validateEmail()
 /* Valida Terminos */
 function validateInfo()
 {
-	var info = document.getElementById("commentInfo").value;
-	if (info.checked==true) 
+	var info = document.getElementById("commentInfo");
+	if (info.checked=true) 
 	{
-		producePrompt("¡Gracias!", "commentInfoPrompt", "blue");
+		producePrompt("¡Gracias por aceptar los Terminos de Usuario!", "commentInfoPrompt", "green");
 		return true;
 	}
 }
