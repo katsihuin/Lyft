@@ -14,13 +14,22 @@ function initCountry()
 	  		countryContainer.innerHTML+=html;
 	  }
 
-	var countryList =document.getElementsByTagName('li');
+	let countryList = Array.from(document.getElementsByClassName('#countriesID>a>li'));
 	
 	for(var i=0; i<countryList.length; i++)
 	{
-		countryList[i].addEventListener('click',onClickList);
+		countryList[i].addEventListener('click',getCountry);
 	}
+}
 
+function getCountry(e)
+{
+	var countryFlag=e.currentTarget.getElementsByClassName('flag')[0].src;
+	var countryDialCode=e.currentTarget.getElementsByClassName('code')[0].textContent;
+	localStorage.getItem('location',countryFlag);
+	localStorage.getItem('intDialCode',countryDialCode);
+	localStorage.setItem('location',countryFlag);
+	localStorage.setItem('intDialCode',countryDialCode);
 }
   	/*
 
