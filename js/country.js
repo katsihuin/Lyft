@@ -26,8 +26,7 @@ function getCountry(e)
 {
 	var countryFlag=e.currentTarget.getElementsByClassName('flag')[0].src;
 	var countryDialCode=e.currentTarget.getElementsByClassName('code')[0].textContent;
-	localStorage.getItem('location',countryFlag);
-	localStorage.getItem('intDialCode',countryDialCode);
+	
 	localStorage.setItem('location',countryFlag);
 	localStorage.setItem('intDialCode',countryDialCode);
 }
