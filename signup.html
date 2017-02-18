@@ -6,10 +6,8 @@
   <title>Lyft App</title>
 
   <!-- Inserta tus enlaces aquí -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="bootstrap-formhelpers/css/bootstrap-formhelpers.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/signup.css">
 	<link rel="stylesheet" href="css/login.css">
@@ -35,16 +33,17 @@
 				<div class="container">
 					<div class="row text-center">
 					  <div class="col-md-8 col-xs-offset-2">				    
-                        <div class="form-group">
-                            <div class="input-group">
-                               <span class="input-group-addon">
-                                <a href="country.html" class="button">
-                                    <img src="" alt="" id="flag">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                               
+                                <a href="country.html" type="button" class="btn btn-default">
+                                    <img src="img/Peru.png" alt="" id="flag">
+                                    <span class="caret"></span>
                                 </a>   
-                               </span>
-                                <span class="input-group-addon" id="dialCode"></span>
-                                <input id="phoneNumber" name="" type="text" class="input-phone" required placeholder="" onkeyup="validatePhone()">
+                             
                             </div>
+                            <span class="input-group-addon" id="dialCode">+51</span>
+                            <input id="phoneNumber" name="" type="text" class="input-phone" required placeholder="" onkeyup="validatePhone()">
                         </div>
 					    <br>
 					    <p>We'll send a text to verify your phone</p>
@@ -56,16 +55,15 @@
 				<div class="container">
 					<div class="row">
 				        <div class="col-md-12 text-center">
-							<a href="#"><button class="btn-login">Next</button></a>
+							<a href="login.html"><button class="btn-login">Next</button></a>
 						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
 	</div>
-	<script src="js/login.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 	<script type="text/javascript" src="js/signup.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </body>
 </html>

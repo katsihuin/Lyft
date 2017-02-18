@@ -3,11 +3,11 @@ function initSignUp() {
     var flag = document.getElementById("flag");
     var dialCode = document.getElementById("dialCode");
     
-    var getFlag = localStorage.getItem('location',countryFlag);
-	var getDialCode = localStorage.getItem('intDialCode',countryDialCode);
+    var getFlag = localStorage.getItem('country',flag);
+	var getDialCode = localStorage.getItem('dialCode',dialCode);
     
-    flag = getFlag.src;
-    dialCode = getDialCode.textContent;
+    flag.src = getFlag;
+    dialCode.textContent = getDialCode;
     
 }
 
