@@ -11,9 +11,17 @@ function initSignUp() {
     
 }
 
-//Si otro cosa que no sea un número es presionado
+function onCode() {
+
+    var lab = "LAB-";
+    var aleatorio = Math.floor((Math.random()*999)+100);
+    var concat = (lab += aleatorio);
+    alert("Tu código de usuario es : " + concat);
+}
+
 
 function keyPresss(event) {
+    //Si otro cosa que no sea un número es presionado
     if (event.which < 48 || event.which > 57){
         event.preventDefault();
     }
