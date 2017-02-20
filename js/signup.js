@@ -11,6 +11,15 @@ function initSignUp() {
     
 }
 
+//Si otro cosa que no sea un número es presionado
+
+function keyPresss(event) {
+    if (event.which < 48 || event.which > 57){
+        event.preventDefault();
+    }
+}
+
+document.getElementsByTagName('input').addEventListener('keydown', keyPresss);
 /*function getCountry()
 {
     var inputCountry = country.value;
