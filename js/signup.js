@@ -1,22 +1,40 @@
 function initSignUp() {
 
-    var flag = document.getElementById("flag");
+    var flagDisplay = document.getElementById("flag");
     var dialCode = document.getElementById("dialCode");
     
-    var getFlag = localStorage.getItem('country',flag);
-	var getDialCode = localStorage.getItem('dialCode',dialCode);
+    var getFlag = localStorage.getItem('country');
+	var getDialCode = localStorage.getItem('dialCode');
     
-    flag.src = getFlag;
-    dialCode.textContent = getDialCode;
-    
+    flagDisplay.src = getFlag;
+    dialCode.textContent = getDialCode;    
 }
 
-function onCode() {
+var inputPhoneNumber = document.getElementById("phoneNumber");
 
-    var lab = "LAB-";
-    var aleatorio = Math.floor((Math.random()*999)+100);
-    var concat = (lab += aleatorio);
-    alert("Tu código de usuario es : " + concat);
+function onBtnNext() {
+    
+    localStorage.setItem('phoneNumber', inputPhoneNumber.value);
+    
+    var emptyNumberAlert = document.getElementById("numberAlert");
+    
+    if(inputNumber.value == '') {
+        emptyNumberAlert.innerHTML = "<p class='text-center'>Número telefónico requerido</p>"
+    } else {
+        emptyNumberAlert.innerHTML = '';
+        randomNumber();
+        location.href = 'login.html';
+    }
+}
+
+function randomNumber() {
+
+    var fixed = "LAB-";
+    var minNumber = 100;
+    var maxNumber = 999;
+    var randomNumber = Math.floor((Math.random()*maxNumber)+minNumber);
+    var labRandomNumber = (fixed += randomNumber);
+    alert("Su código único de usuario es: " + labRandomNumber);
 }
 
 
@@ -27,8 +45,8 @@ function keyPresss(event) {
     }
 }
 
-document.getElementsByTagName('input').addEventListener('keydown', keyPresss);
-/*function getCountry()
+/*document.getElementsByTagName('input').addEventListener('keydown', keyPresss);
+function getCountry()
 {
     var inputCountry = country.value;
 	localStorage.setItem('country', inputCountry);
